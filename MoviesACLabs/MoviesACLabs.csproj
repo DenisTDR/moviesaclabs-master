@@ -103,6 +103,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Images\dogs\dog1.jpg" />
+    <Content Include="Images\dogs\dog2.jpg" />
+    <Content Include="Images\dogs\dog3.jpg" />
+    <Content Include="Images\dogs\dog4.jpg" />
+    <Content Include="Images\dogs\dog5.jpg" />
     <Content Include="Index.html" />
     <Content Include="Scripts\Main.js" />
     <Content Include="Styles\Screen.css" />
