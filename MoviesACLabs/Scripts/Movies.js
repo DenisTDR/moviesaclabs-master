@@ -22,11 +22,19 @@
     });
 
     $("#loadMoviesBtn").click(function () {
-        $.getJSON("/api/Movies", "", function (data) {            
-            $(data).each(function () {
-                addMovie(this.Title);
-            })
-        });
+        //$.getJSON("/api/Movies", "", function (data) {            
+        //    $(data).each(function () {
+        //        addMovie(this.Title);
+        //    })
+        //});
+        $.ajax({
+            url: "/api/Movies",
+            success: function (data) {
+                $(data).each(function () {
+                    addMovie(this.Title);
+                });
+            }
+        })
     }).click();
 
     function addMovie(movieName) {
