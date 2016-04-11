@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My fav movies</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div class="page">
+        <div>
+            <button id="loadMoviesBtn"> Load from api</button>
+        </div>
+        <div>
+            <label for="movieName">Nume film</label> 
+            <input type="text" placeholder="Introdu numele filmului" name="movieName" id="movieName"/>
+            <input type="button" value="Salvează" id="newMovieBtn" />
+        </div>
+        <div class="moviesContainer">
+            <ul id="moviesList">
+            </ul>
+        </div>
+    </div>
+    <script src="Scripts/jquery-1.12.3.js"></script>
+    <script src="Scripts/Movies.js"></script>
+</body>
+</html>
