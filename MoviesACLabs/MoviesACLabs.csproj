@@ -102,6 +102,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AngularLab\Index.html" />
+    <Content Include="AngularLab\Scripts.js" />
+    <Content Include="AngularLab\Styles.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\dogs\dog1.jpg" />
     <Content Include="Images\dogs\dog2.jpg" />

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html ng-app="todo">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+    <div class="container" ng-controller="MainController">
+        <div class="top">
+            <input type="text" placeholder="What needs to be done?" ng-model="addingItem"/>
+            <button ng-click="addItem()">Add</button>
+        </div>
+        <div class="middle">
+            <div class="row" ng-repeat="item in items" 
+                 ng-if="item.Show"
+                 ng-show="show=='all' || (item.Completed&&show=='completed') || (!item.Completed&&show=='active')">
+                <input type="checkbox" id="chk{{item.Id}}" ng-model="item.Completed"/>
+                <label for="chk{{item.Id}}" >{{item.Text}}</label>
+            </div>
+        </div>
+        <div class="bottom">
+            Page #{{crtPage}}
+            <button ng-click="prev()">Prev</button>
+            <button ng-click="next()">Next</button>
+            <br/>
+            <div style="display:inline-block">{{itemsLeft()}} items left</div>
+            <button ng-click="display('all')">All</button>
+            <button ng-click="display('active')">Active</button>
+            <button ng-click="display('completed')">Completed</button>
+        </div>
+    </div>
+
+    <link href="Styles.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js" type="text/javascript" ></script>
+    <script src="Scripts.js" type="text/javascript"></script>
+</body>
+</html>
