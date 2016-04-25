@@ -102,24 +102,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AngularLab\Index.html" />
-    <Content Include="AngularLab\Scripts.js" />
-    <Content Include="AngularLab\Styles.css" />
+    <Content Include="AngularLab2\Index.html" />
+    <Content Include="AngularLab2\js.js" />
+    <Content Include="AngularLab2\css.css" />
+    <Content Include="old\AngularLab\Index.html" />
+    <Content Include="old\AngularLab\Scripts.js" />
+    <Content Include="old\AngularLab\Styles.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\dogs\dog1.jpg" />
     <Content Include="Images\dogs\dog2.jpg" />
     <Content Include="Images\dogs\dog3.jpg" />
     <Content Include="Images\dogs\dog4.jpg" />
     <Content Include="Images\dogs\dog5.jpg" />
-    <Content Include="Index.html" />
-    <Content Include="IndexImageSlider.html" />
-    <Content Include="IndexMovies.html" />
-    <Content Include="Scripts\ImageSlider.js" />
-    <Content Include="Scripts\jquery-1.12.3.js" />
-    <Content Include="Scripts\Main.js" />
-    <Content Include="Scripts\Movies.js" />
-    <Content Include="Styles\ImageSlider.css" />
-    <Content Include="Styles\Screen.css" />
+    <Content Include="old\Index.html" />
+    <Content Include="old\IndexImageSlider.html" />
+    <Content Include="old\IndexMovies.html" />
+    <Content Include="old\ImageSlider.js" />
+    <Content Include="old\jquery-1.12.3.js" />
+    <Content Include="old\Main.js" />
+    <Content Include="old\Movies.js" />
+    <Content Include="old\ImageSlider.css" />
+    <Content Include="old\Screen.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +160,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Styles\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201603311406291_Initial.resx">

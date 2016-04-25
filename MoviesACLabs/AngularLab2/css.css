@@ -1,0 +1,36 @@
+﻿body {
+}
+
+.container{
+}
+
+.actorsTable{
+    text-align:left;
+}
+
+.actorsTable td,
+.actorsTable th{
+    padding-left: 15px;
+}
+
+.tableWrapper{
+    text-align: center;
+}
+.actorsTable{
+    display: inline-block;
+    border-collapse: collapse;
+}
+
+.actorsTable td,
+.actorsTable th{
+    border:1px solid black;
+}
+
+.header{
+    text-align:center;
+    font-size: 2em;
+}
+
+.formRow{
+
+}
