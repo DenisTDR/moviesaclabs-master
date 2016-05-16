@@ -42,6 +42,18 @@ namespace MoviesACLabs.Controllers
             return Ok(actorModel);
         }
 
+        // GET: api/Actors/5
+        [ResponseType(typeof(IList<ActorModel>))]
+        [Route("api/Actors/richActors/{revenue}")]
+        public IHttpActionResult GetRichActors(int revenue)
+        {
+            var richActors = db.Actors.Where(a => a.Revenue >= revenue);
+
+            var rez = Mapper.Map<IList<ActorModel>>(richActors);
+
+            return Ok(rez);
+        }
+
         // PUT: api/Actors/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutActor(int id, ActorModel actorModel)
@@ -89,6 +101,28 @@ namespace MoviesACLabs.Controllers
             }
 
             var actor = Mapper.Map<Actor>(actorModel);
+
+            var awards = Mapper.Map<IList<Award>>(actor.Awards);
+
+            var awardsToAdd = new List<Award>();
+            foreach(var aw in awards)
+            {
+                var aw1 = db.Awards.FirstOrDefault(a => a.Id == aw.Id);
+                if(aw1 != null)
+                {
+                    awardsToAdd.Add(aw1);
+                }
+                else
+                {
+                    aw.Actors.Add(actor);
+                    awardsToAdd.Add(aw);
+                    db.Awards.Add(aw);
+                }
+            }
+            
+
+            actor.Awards = awardsToAdd;
+            
 
             db.Actors.Add(actor);
             db.SaveChanges();

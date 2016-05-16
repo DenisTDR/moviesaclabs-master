@@ -20,6 +20,9 @@ namespace MoviesACLabs.App_Start
 
             Mapper.CreateMap<Review, ReviewModel>();
             Mapper.CreateMap<ReviewModel, Review>();
+
+            Mapper.CreateMap<Award, AwardModel>();
+            Mapper.CreateMap<AwardModel, Award>();
         }
     }
 }
