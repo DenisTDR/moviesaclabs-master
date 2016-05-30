@@ -7,13 +7,13 @@ namespace MoviesACLabs.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class changeOneToManyToManyToMany : IMigrationMetadata
+    public sealed partial class planesAndAirlines : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(changeOneToManyToManyToMany));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(planesAndAirlines));
         
         string IMigrationMetadata.Id
         {
-            get { return "201605161322415_changeOneToManyToManyToMany"; }
+            get { return "201605301130534_planesAndAirlines"; }
         }
         
         string IMigrationMetadata.Source

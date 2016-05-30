@@ -15,6 +15,7 @@ namespace MoviesACLabs.Entities
 
         public int RandomNumber { get; set; }
         
-        public virtual IList<Actor> Actors { get; set; }
+        public int ActorId { get; set; }
+        public virtual Actor Actor { get; set; }
     }
 }

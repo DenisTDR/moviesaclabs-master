@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html ng-app="airlines">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div class="main" ng-controller="AirlinesController">
+        <div class="airlines">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>Planes</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="airline" ng-repeat="airline in airlines" ng-show="!feFilter || airline.Planes.length>1">
+                        <td>
+                            {{airline.Id}}
+                        </td>
+                        <td>
+                            {{airline.Name}}
+                        </td>
+                        <td>
+                            {{airline.Country}}
+                        </td>
+                        <td>
+                            <div ng-repeat="plane in airline.Planes">{{plane.Model}}({{plane.Seats}})</div>
+                        </td>
+                        <td>
+                            <button ng-click="deleteAirline(airline.Id);">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <button ng-click="beFilter(false);">All Airlines</button>
+            <button ng-click="beFilter(true);">2 Vowels Airlines</button>
+            <br />
+
+            <button ng-click="feFilter = false;">All Airlines</button>
+            <button ng-click="feFilter = true;">At least two planes</button>
+        </div>
+
+        <div class="airlineForm">
+            <div >
+                <div>
+                    <label>Name: </label>
+                    <input type="text" ng-model="addingAirline.Name" />
+                </div>
+                <div>
+                    <label>Country: </label>
+                    <input type="text" ng-model="addingAirline.Country" />
+                </div>
+                <div>
+                    <label>Planes: </label>
+                    <div class="planesInAirline">
+                        <div ng-repeat="plane in addingAirline.Planes" class="plane">
+                            <div>
+                                <label>Seats: </label>
+                                <input type="number" ng-model="plane.Seats" />
+                            </div>
+                            <div>
+                                <label>Model: </label>
+                                <input type="text" ng-model="plane.Model" />
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button ng-click="addPlaneToNewAirline();">Add new Plane</button>
+                </div>
+            </div>
+            <button ng-click="addTheAirline()">Add the Airline</button>
+        </div>
+
+           
+
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js" type="text/javascript"></script>
+    <script src="js/js.js"></script>
+    <link href="css/css.css" rel="stylesheet" />
+</body>
+</html>

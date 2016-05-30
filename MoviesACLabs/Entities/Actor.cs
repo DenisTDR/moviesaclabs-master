@@ -18,7 +18,7 @@ namespace MoviesACLabs.Entities
 
         public virtual IList<Movie> Movies { get; set; }
 
-        public virtual IList<Award> Awards { get; set; }
+        //public virtual IList<Award> Awards { get; set; }
 
     }
 }

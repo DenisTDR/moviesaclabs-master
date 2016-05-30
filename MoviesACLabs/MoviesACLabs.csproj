@@ -105,6 +105,9 @@
     <Content Include="AngularLab2\Index.html" />
     <Content Include="AngularLab2\js.js" />
     <Content Include="AngularLab2\css.css" />
+    <Content Include="Avioane\css\css.css" />
+    <Content Include="Avioane\Index.html" />
+    <Content Include="Avioane\js\js.js" />
     <Content Include="AwardsClient\css.css" />
     <Content Include="AwardsClient\Index.html" />
     <Content Include="AwardsClient\js.js" />
@@ -133,13 +136,17 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ActorsController.cs" />
+    <Compile Include="Controllers\AirlinesController.cs" />
     <Compile Include="Controllers\AwardsController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\PlanesController.cs" />
     <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Data\MoviesContext.cs" />
     <Compile Include="Entities\Actor.cs" />
+    <Compile Include="Entities\Airline.cs" />
     <Compile Include="Entities\Award.cs" />
     <Compile Include="Entities\Movie.cs" />
+    <Compile Include="Entities\Plane.cs" />
     <Compile Include="Entities\Review.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -156,14 +163,20 @@
     <Compile Include="Migrations\201605161303039_AddedAwardsToActors.Designer.cs">
       <DependentUpon>201605161303039_AddedAwardsToActors.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201605161322415_changeOneToManyToManyToMany.cs" />
-    <Compile Include="Migrations\201605161322415_changeOneToManyToManyToMany.Designer.cs">
-      <DependentUpon>201605161322415_changeOneToManyToManyToMany.cs</DependentUpon>
+    <Compile Include="Migrations\201605301130534_planesAndAirlines.cs" />
+    <Compile Include="Migrations\201605301130534_planesAndAirlines.Designer.cs">
+      <DependentUpon>201605301130534_planesAndAirlines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605301214460_planesAndAirlines_bugfix.cs" />
+    <Compile Include="Migrations\201605301214460_planesAndAirlines_bugfix.Designer.cs">
+      <DependentUpon>201605301214460_planesAndAirlines_bugfix.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ActorModel.cs" />
+    <Compile Include="Models\AirlineModel.cs" />
     <Compile Include="Models\AwardModel.cs" />
     <Compile Include="Models\MovieModel.cs" />
+    <Compile Include="Models\PlaneModel.cs" />
     <Compile Include="Models\ReviewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -191,8 +204,11 @@
     <EmbeddedResource Include="Migrations\201605161303039_AddedAwardsToActors.resx">
       <DependentUpon>201605161303039_AddedAwardsToActors.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605161322415_changeOneToManyToManyToMany.resx">
-      <DependentUpon>201605161322415_changeOneToManyToManyToMany.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605301130534_planesAndAirlines.resx">
+      <DependentUpon>201605301130534_planesAndAirlines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605301214460_planesAndAirlines_bugfix.resx">
+      <DependentUpon>201605301214460_planesAndAirlines_bugfix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

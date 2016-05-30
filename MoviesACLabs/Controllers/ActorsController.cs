@@ -95,39 +95,40 @@ namespace MoviesACLabs.Controllers
         [ResponseType(typeof(ActorModel))]
         public IHttpActionResult PostActor(ActorModel actorModel)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            /* if (!ModelState.IsValid)
+             {
+                 return BadRequest(ModelState);
+             }
 
-            var actor = Mapper.Map<Actor>(actorModel);
+             var actor = Mapper.Map<Actor>(actorModel);
 
-            var awards = Mapper.Map<IList<Award>>(actor.Awards);
+             //var awards = Mapper.Map<IList<Award>>(actor.Awards);
 
-            var awardsToAdd = new List<Award>();
-            foreach(var aw in awards)
-            {
-                var aw1 = db.Awards.FirstOrDefault(a => a.Id == aw.Id);
-                if(aw1 != null)
-                {
-                    awardsToAdd.Add(aw1);
-                }
-                else
-                {
-                    aw.Actors.Add(actor);
-                    awardsToAdd.Add(aw);
-                    db.Awards.Add(aw);
-                }
-            }
-            
+             var awardsToAdd = new List<Award>();
+             foreach(var aw in awards)
+             {
+                 var aw1 = db.Awards.FirstOrDefault(a => a.Id == aw.Id);
+                 if(aw1 != null)
+                 {
+                     awardsToAdd.Add(aw1);
+                 }
+                 else
+                 {
+                     //aw.Actors.Add(actor);
+                     awardsToAdd.Add(aw);
+                     db.Awards.Add(aw);
+                 }
+             }
 
-            actor.Awards = awardsToAdd;
-            
 
-            db.Actors.Add(actor);
-            db.SaveChanges();
+            // actor.Awards = awardsToAdd;
 
-            return CreatedAtRoute("DefaultApi", new { id = actor.Id }, actor);
+
+             db.Actors.Add(actor);
+             db.SaveChanges();
+
+             return CreatedAtRoute("DefaultApi", new { id = actor.Id }, actor);*/
+            return null;
         }
 
         // DELETE: api/Actors/5

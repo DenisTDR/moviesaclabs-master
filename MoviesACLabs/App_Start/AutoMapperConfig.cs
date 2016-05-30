@@ -23,6 +23,13 @@ namespace MoviesACLabs.App_Start
 
             Mapper.CreateMap<Award, AwardModel>();
             Mapper.CreateMap<AwardModel, Award>();
+
+            Mapper.CreateMap<Plane, PlaneModel>();
+            Mapper.CreateMap<PlaneModel, Plane>();
+
+            Mapper.CreateMap<Airline, AirlineModel>();
+            Mapper.CreateMap<AirlineModel, Airline>();
+
         }
     }
 }

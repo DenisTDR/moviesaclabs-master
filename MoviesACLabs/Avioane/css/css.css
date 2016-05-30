@@ -1,0 +1,18 @@
+﻿body {
+}
+
+
+.planesInAirline{
+    margin-left: 20px;
+}
+
+.planesInAirline .plane{
+    border: 1px solid gray;
+    margin: 10px;
+    display: inline-block;
+    
+}
+
+.airlineForm {
+    margin-top: 20px;
+}
